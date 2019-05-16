@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 2rem;
+}
+
+.soal {
+  background-color: yellow;
+  margin-bottom: 1rem;
+  height: 15rem;
+}
+
+.timer {
+  background-color: red;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.opsi-group {
+  background-color: grey;
+  height: 10rem;
+  display: flex;
+}
+
+.opsi {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: green;
+  cursor: pointer;
+}
