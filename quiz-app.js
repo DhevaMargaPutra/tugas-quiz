@@ -26,15 +26,13 @@ const soals = [
 
 const soalDOM = document.getElementById("soal");
 const opsiGroupDOM = document.getElementById("opsi-group");
+const indikatorSoal = document.getElementById("indikator-soal");
 
 let currentSoal = [];
+let nomorSoal = 0;
+let totalSoal = soals.length;
 
 function populateSoal() {
-  if (soals.length === 0) {
-    console.error("soal habis!");
-    return;
-  }
-
   const r = Math.floor(Math.random() * soals.length);
 
   currentSoal = soals.splice(r, 1)[0];
@@ -45,4 +43,29 @@ function populateSoal() {
   }
 }
 
-// function
+function populateIndicatorSoal() {
+  nomorSoal += 1;
+  indikatorSoal.innerHTML = `${nomorSoal}/${totalSoal}`;
+}
+
+nextSoal();
+
+function checkJawaban(indexJawaban) {
+  if (indexJawaban === currentSoal.jawaban) {
+    console.log("benar");
+    nextSoal();
+    return;
+  }
+
+  console.log("salah");
+}
+
+function nextSoal() {
+  if (soals.length === 0) {
+    alert("soal habis!");
+    return;
+  }
+
+  populateSoal();
+  populateIndicatorSoal();
+}

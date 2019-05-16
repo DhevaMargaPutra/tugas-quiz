@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kodchasan"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <div class="soal" id="soal">soal</div>
-    <div class="timer"></div>
-    <div class="opsi-group" id="opsi-group">
-      <div class="opsi" id="a">a</div>
-      <div class="opsi" id="b">b</div>
-      <div class="opsi" id="c">c</div>
-      <div class="opsi" id="d">d</div>
+    <div class="container">
+      <div class="soal s t" id="soal">soal</div>
+      <div class="timer s"><div class="timer-isi"></div></div>
+      <div class="opsi-container">
+        <div class="opsi-group" id="opsi-group">
+          <div class="opsi a s t" onclick="checkJawaban(0)" id="a">a</div>
+          <div class="opsi b s t" onclick="checkJawaban(1)" id="b">b</div>
+          <div class="opsi c s t" onclick="checkJawaban(2)" id="c">c</div>
+          <div class="opsi d s t" onclick="checkJawaban(3)" id="d">d</div>
+        </div>
+      </div>
+      <div class="soal-indicator s t" id="indikator-soal">1/10</div>
+      <script src="./quiz-app.js"></script>
     </div>
-
-    <script src="./quiz-app.js"></script>
   </body>
 </html>

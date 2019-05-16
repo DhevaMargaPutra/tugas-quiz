@@ -1,33 +1,109 @@
-html,
-body {
+html {
   height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  margin: 2rem;
+  top: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(236, 240, 241);
+}
+
+.container {
+  /* background-color: brown; */
+  display: grid;
+  height: 100%;
+  grid-template-rows: 40% 5% 45% 10%;
 }
 
 .soal {
-  background-color: yellow;
-  margin-bottom: 1rem;
-  height: 15rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem;
 }
 
 .timer {
+  background-color: white;
+  border-radius: 20px;
+  margin: 0rem 2rem 0px 2rem;
+  position: relative;
+}
+
+.timer-isi {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
   background-color: red;
-  height: 2rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  left: 1px;
+  transform: scaleX(0.5);
+}
+
+.opsi-container {
+  /* background-color: pink; */
+  margin: 2rem;
 }
 
 .opsi-group {
-  background-color: grey;
-  height: 10rem;
-  display: flex;
+  /* background-color: tomato; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  height: 100%;
 }
 
 .opsi {
-  padding: 1rem;
-  margin: 1rem;
-  background-color: green;
+  background-color: white;
   cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  /* margin: 1rem; */
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.a {
+  /* background-color: red; */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.b {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  /* background-color: green; */
+}
+
+.c {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  /* background-color: blue; */
+}
+
+.d {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  /* background-color: grey; */
+}
+
+.soal-indicator {
+  background-color: cyan;
+  margin: 0rem 2rem 2rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.3rem 2rem 0rem 2rem;
+}
+
+.s {
+  box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.t {
+  font-family: "Kodchasan", sans-serif;
 }
