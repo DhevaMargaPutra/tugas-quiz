@@ -9,12 +9,14 @@
       href="https://fonts.googleapis.com/css?family=Kodchasan"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Quiz App</title>
   </head>
   <body>
     <div class="container">
       <div class="soal s t" id="soal">soal</div>
-      <div class="timer s"><div class="timer-isi"></div></div>
+      <div class="timer s">
+        <div class="timer-isi timer-animation" id="timer-isi"></div>
+      </div>
       <div class="opsi-container">
         <div class="opsi-group" id="opsi-group">
           <div class="opsi a s t" onclick="checkJawaban(0)" id="a">a</div>
@@ -23,8 +25,20 @@
           <div class="opsi d s t" onclick="checkJawaban(3)" id="d">d</div>
         </div>
       </div>
-      <div class="soal-indicator s t" id="indikator-soal">1/10</div>
-      <script src="./quiz-app.js"></script>
+      <div class="soal-indicator s t" id="indikator-soal">0/0</div>
     </div>
+    <div class="result-container" id="result-container">
+      <div class="result">
+        <div class="t r-i">Good Job</div>
+        <div class="t r-i" id="score">score: 0</div>
+        <a href="opening.html"
+          ><img
+            class="back"
+            height="50px"
+            src="./images/icons8-back-arrow-64 (1).png"
+        /></a>
+      </div>
+    </div>
+    <script class="back" src="./quiz-app.js"></script>
   </body>
 </html>
