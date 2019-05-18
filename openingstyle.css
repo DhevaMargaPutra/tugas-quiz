@@ -9,6 +9,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-image: url(./images/pool_table.png);
+    background-color: #7bed9f;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -24,11 +25,12 @@ html, body {
     height: 36rem;
     width: 45rem;
     background-image: url(./images/paper_2_@2X.png);
-    box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.5);
+    background-color: #12CBC4;
 }
 
 .logo img {
     background-image: url(./images/brushed_alu_dark_@2X.png);
+    background-color: white;
     border-radius: 50%;
     border: 0.5rem solid #2f3542;
     width: 10rem;
@@ -54,6 +56,7 @@ html, body {
 
 .imgbutton {
     background-image: url(./images/brushed_alu_dark_@2X.png);
+    background-color: white;
     width: 5rem;
     height: 5rem;
     border-radius: 1.5rem;

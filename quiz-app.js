@@ -26,11 +26,14 @@ const soals = [
 
 const soalDOM = document.getElementById("soal");
 const opsiGroupDOM = document.getElementById("opsi-group");
-const indikatorSoal = document.getElementById("indikator-soal");
+const indikatorSoalDOM = document.getElementById("indikator-soal");
+const timerIsiDOM = document.getElementById("timer-isi");
+const resultContainerDOM = document.getElementById("result-container");
+const scoreDOM = document.getElementById("score");
 
 let currentSoal = [];
-let nomorSoal = 0;
-let totalSoal = soals.length;
+let totalBenar = 0;
+let totalSoal = 0;
 
 function populateSoal() {
   const r = Math.floor(Math.random() * soals.length);
@@ -44,28 +47,46 @@ function populateSoal() {
 }
 
 function populateIndicatorSoal() {
-  nomorSoal += 1;
-  indikatorSoal.innerHTML = `${nomorSoal}/${totalSoal}`;
+  indikatorSoalDOM.innerHTML = `${totalBenar}/${totalSoal}`;
+  totalSoal++;
 }
 
 nextSoal();
 
 function checkJawaban(indexJawaban) {
   if (indexJawaban === currentSoal.jawaban) {
-    console.log("benar");
-    nextSoal();
-    return;
+    totalBenar += 1;
+    resetTimer();
+  } else {
+    resetTimer();
   }
-
-  console.log("salah");
 }
 
 function nextSoal() {
   if (soals.length === 0) {
-    alert("soal habis!");
+    populateIndicatorSoal();
+    timerIsiDOM.classList.remove("timer-animation");
+    resultContainerDOM.style.display = "flex";
+    scoreDOM.innerHTML = `score: ${totalBenar}`;
     return;
   }
 
   populateSoal();
   populateIndicatorSoal();
+}
+
+timerIsiDOM.addEventListener("animationend", function() {
+  if (soals.length === 0) {
+    timerIsiDOM.classList.remove("timer-animation");
+    populateIndicatorSoal();
+    return;
+  }
+  resetTimer();
+});
+
+function resetTimer() {
+  nextSoal();
+  timerIsiDOM.classList.remove("timer-animation");
+  void timerIsiDOM.offsetWidth;
+  timerIsiDOM.classList.add("timer-animation");
 }

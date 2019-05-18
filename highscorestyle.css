@@ -3,6 +3,10 @@ html {
     width: 100%;
     margin: 0px;
     padding: 0px;
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 0px;
 }
 
 body {
@@ -16,14 +20,20 @@ body {
 .container {
     background-image: url(./images/brushed_alu_dark_@2X.png);
     background-repeat: repeat;
+    background-color: #ffbe76;
+}
+
+.container {
+    background-color:red; 
     display: grid;
     height: 100%;
     grid-template-rows: 20% 50% 30%;
 }
 
 .header {
-    background-image: url(./images/pool_table.png);
+  background-image: url(./images/pool_table.png);
     background-repeat: repeat;
+    background-color: yellowgreen;
     border-radius: 20px;
     padding: 0.8rem;
     margin: 0.8rem;
@@ -51,6 +61,23 @@ body {
 
 .button {
     background-image: url(./images/pool_table.png);
+}
+
+.header h1 {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: brown;
+}
+
+.list-score {
+    background-color: cadetblue;
+    border-radius: 20px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+}
+
+.button {
+    background-color: magenta;
     border-radius: 20px;
     padding: 0.8rem;
     margin: 0.8rem;
@@ -74,6 +101,12 @@ body {
     font-family: "Kodchasan", sans-serif;
     font-size: 2rem;
     color: #dcdde1;
+    background-color: white;
+}
+
+.button h2 {
+    font-size: 2rem;
+    color: black;
     margin-top: 5px;
     margin-bottom: 4px;
 }

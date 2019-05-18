@@ -11,11 +11,18 @@ body {
   padding: 0px;
   height: 100%;
   width: 100%;
-  background-color: rgb(236, 240, 241);
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  /* background-color: brown; */
+  border-radius: 20px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(236, 240, 241);
+  width: 23rem;
   display: grid;
   height: 100%;
   grid-template-rows: 40% 5% 45% 10%;
@@ -41,8 +48,21 @@ body {
   border-radius: 20px;
   background-color: red;
   position: absolute;
-  left: 1px;
-  transform: scaleX(0.5);
+  left: 0px;
+}
+
+.timer-animation {
+  animation-name: timer-shrink;
+  animation-duration: 10s;
+}
+
+@keyframes timer-shrink {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
 }
 
 .opsi-container {
@@ -60,12 +80,15 @@ body {
 
 .opsi {
   background-color: white;
-  cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  /* margin: 1rem; */
+  cursor: pointer;
   border-radius: 20px;
   padding: 1rem;
+}
+
+.opsi:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .a {
@@ -93,7 +116,7 @@ body {
 }
 
 .soal-indicator {
-  background-color: cyan;
+  background-color: white;
   margin: 0rem 2rem 2rem 2rem;
   border-radius: 20px;
   text-align: center;
@@ -106,4 +129,36 @@ body {
 
 .t {
   font-family: "Kodchasan", sans-serif;
+}
+
+.result-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.result {
+  height: 50%;
+  width: 23rem;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.r-i {
+  margin: 0 0 2rem 0;
+}
+
+.back {
+  cursor: pointer;
 }
