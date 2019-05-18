@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/pool_table.png);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 36rem;
+    width: 45rem;
+    background-image: url(./images/paper_2_@2X.png);
+    box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    background-image: url(./images/brushed_alu_dark_@2X.png);
+    border-radius: 50%;
+    border: 0.5rem solid #2f3542;
+    width: 10rem;
+    height: 10rem;
+}
+
+.text h1 {
+    font-family: "Kodchasan", sans-serif;
+    color: #2f3542;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px
+}
+
+.button {
+    height: 10rem;
+    width: 36rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgbutton {
+    background-image: url(./images/brushed_alu_dark_@2X.png);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    border: 0.2rem solid #2f3542;
+}

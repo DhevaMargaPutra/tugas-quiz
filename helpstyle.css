@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+body {
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+    
+.container {
+    background-image: url(./images/brushed_alu_dark_@2X.png);
+    background-repeat: repeat; 
+    display: grid;
+    height: 100%;
+    grid-template-rows: 20% 50% 30%;
+}
+
+.header {
+    background-image: url(./images/pool_table.png);
+    border-radius: 20px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 3rem;
+    color: #dcdde1;
+}
+
+.list-help {
+    font-family: "Kodchasan", sans-serif;
+    background-image: url(./images/paper_2_@2X.png);
+    border-radius: 20px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    background-image: url(./images/pool_table.png);
+    border-radius: 20px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button img {
+    background-image: url(./images/brushed_alu_dark_@2X.png);
+    border-radius: 1rem;
+    border: 0.1rem solid #2f3352;
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+}
+
+.button h2 {
+    font-family: "Kodchasan", sans-serif;
+    font-size: 2rem;
+    color: #dcdde1;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
